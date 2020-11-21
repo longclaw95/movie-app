@@ -2,6 +2,7 @@ import React from "react";
 import {Card,Col} from "react-bootstrap";
 import propTypes from "prop-types"
 import ReactStars from 'react-rating-stars-component';
+import { Link } from 'react-router-dom';
 
 import "./MovieCard.css";
 
@@ -12,7 +13,7 @@ const MovieCard = ({movie}) => {
     <div className="profile-card">
       
               
-          
+      <Link to={`/Movie_Detail/${movie.title}`}> 
       <Card style={{ width: "18rem",
       height: "30rem",
           marginRight: "30px",
@@ -42,6 +43,7 @@ const MovieCard = ({movie}) => {
   </Card.Body>
   <Card.Footer><ReactStars value={movie.rate} edit={false}/></Card.Footer>
 </Card>
+</Link>   
 
     </div>
   );

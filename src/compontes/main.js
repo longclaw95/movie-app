@@ -4,6 +4,8 @@ import Movies from './Movies';
 import Header from './Header';
 import ReactStars from 'react-rating-stars-component';
 import {Container,Col ,Row, Form, FormControl, Button} from "react-bootstrap";
+import { Link, Route } from 'react-router-dom';
+import Details from './Details';
 
 
 import picture1 from '../assets/Popular on Netflix/p1.PNG';
@@ -28,13 +30,14 @@ function Main() {
   // let name="Wassim"
   const movies = [{posterUrl: picture1 ,
     title: 'The Road Trick',
+    trailer :'https://www.youtube.com/watch?v=fWhlnoAT_Ic',
     rate: 4,
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ut congue metus. ",
     },
     {
       posterUrl: picture2 ,
       title: 'Wynonna Earp',
-      
+      trailer : 'https://www.youtube.com/watch?v=8z8BO6IevA8',
       rate: 5,
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ut congue metus.",
       
@@ -42,7 +45,7 @@ function Main() {
     {
       posterUrl: picture3 ,
       title: 'Club De Cuervos',
-      
+      trailer:'https://www.youtube.com/watch?v=n9xhJrPXop4',
       rate: 4,
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ut congue metus.",
       
@@ -92,7 +95,7 @@ function Main() {
     <ReactStars onChange={(e) => onSearch('rate', e)}/>
     <Movies movies={listSearchedMovies} />
     
-      
+    
     </div>
   );
 }
